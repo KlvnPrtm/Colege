@@ -42,9 +42,9 @@
 
 // prompt('tes');
 
-var tes = 4;
-var pak = 9;
+let tes = 4;
+let pak = 9;
 
-ini = tes + pak;
+let ini = tes + pak;
 
 console.log("Hasil Dari Penjumlahan = ", ini);
