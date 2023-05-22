@@ -1,4 +1,4 @@
-rcpy(Huruf, Toko[i].Buah);
+// rcpy(Huruf, Toko[i].Buah);
             // strcpy(Huruf1, Toko[i+1].Buah);
             // for (int k = 0; Huruf[k]; k++){
             //     Huruf[k]=tolower(Huruf[k]);
