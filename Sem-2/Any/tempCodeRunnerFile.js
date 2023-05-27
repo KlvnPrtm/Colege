@@ -1,6 +1,6 @@
+let pak = 9;
+let tes = 2;
 
-var pak = 9;
-
-ini = tes + pak;
+let ini = tes + pak;
 
 console.log(ini);
