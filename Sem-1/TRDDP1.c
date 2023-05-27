@@ -362,7 +362,7 @@ int main(){
 						printf("Terima Kasih");
 						exit=1;
 					}
-					printf("\nTekan Enter/Esc Untuk Kembali");
+					printf("\nTekan Enter/Esc Untuk Kembali\n");
 				}
 				key=getch();
 				if(key == 13){
