@@ -9,6 +9,4 @@ int main(){
     printf("%d %d %d\n", a, d, g);
     printf("%d %d %d\n", b, e, h);
     printf("%d %d %d", c, f, i);
-
-    
 }
