@@ -37,6 +37,7 @@ int main (){
         printf("%c",nama[i]);
         }
 
+            
 
         for (i=1;i<=60000;i++)
 		for (j=1;j<=10000;j++);

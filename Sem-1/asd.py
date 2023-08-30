@@ -5,7 +5,7 @@ t.pensize(2)
 t.color('green')
 t.left(90)
 t.backward(100)
-t.speed(200)
+t.speed(100)
 t.shape('turtle')
 
 def tree(i):
@@ -13,7 +13,7 @@ def tree(i):
         return
     else:
         t.forward(i)
-        t.color('orange')
+        t.color('red')
         t.circle(2)
         t.color('brown')
         t.left(30)

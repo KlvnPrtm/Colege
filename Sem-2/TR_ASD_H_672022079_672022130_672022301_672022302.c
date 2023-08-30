@@ -427,12 +427,12 @@ const char spasi[]={"                                                   "};
 
 int main() {
 
-	if (!login()) {
+	/*if (!login()) {
 		return 0;
 	}
-    loading();
+    loading();*/
 	int pilihan,i;
-	char a[100] = {"Terima Kasih"};
+	char a[100] = {"Terima Kasih Buat Kalian Semua//////////"};
 
 	while (1) {
         system("cls && color 76");
