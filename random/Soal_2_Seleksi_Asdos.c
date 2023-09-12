@@ -44,7 +44,7 @@ int main(){
 
         if (kbhit()) {
             ch = getch();
-            if ((int)ch == 32) {
+            if ((int)ch == 13) {
                 reverse = !reverse; // Toggle the reverse flag
             }
         }
