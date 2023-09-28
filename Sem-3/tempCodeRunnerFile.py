@@ -1,13 +1,11 @@
+==")
+    print("1. Input Hewan")
+    print("2. Lihat Data Hewan")
+    print("3. Exit")
+    Pilih = int(input("Pilihan:"))
+    print(Pilih)
 
-    """Nothin Here"""
-    print("Halo, " + nama + ", Km Apa Kabar?")
-    return nama
-    
-sapa('Umar')
-sapa('Diva')
-sapa('Aziz')
+    os.system("cls")
 
-keluaran=sapa('Kisa')
-print(keluaran)
-
-print(sapa.__doc__)
+    if Pilih == 1:
+        Panggil()

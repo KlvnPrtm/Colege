@@ -113,57 +113,56 @@ void printKpk(){
 
 int main(){
 	char key=0;
-		Keluar=0;
-		while(Keluar != 1){
-			if(kbhit()){
-				key=getch();
-			}
-			if(key == '1'){
-				Pilihan = 1;
-			}
-			if(key == '2'){
-				Pilihan = 2;
-			}
-			if(key == '3'){
-				Pilihan = 3;
-			}
-			if(key == 13){ 
-				Keluar = 1;
-			}
-			printMenu(Pilihan);
-			
-			key = 0;
-			for(i=0; i <=5000; i++){
-				for(j=0; j<=10000; j++){
-				}
-			}
+	Keluar=0;
+	while(Keluar != 1){
+		if(kbhit()){
+			key=getch();
 		}
-		if(Pilihan == 1){
-			Keluar=0;
-			while(!Keluar) {
-				printFpb();
-				printf("\nPress Esc To Exit");
-				key = getch();
-				if(key == 27){
-					Keluar = 1;
-					key = 0;
-				}
-			}
+		if(key == '1'){
+			Pilihan = 1;
 		}
-		if(Pilihan == 2){
-			Keluar=0;
-			while(Keluar != 1) {
-				printKpk();
-				printf("\nPress Esc To Exit");
-				key = getch();
-				if(key == 27){
-					Keluar =1;
-					key=0;
-				}
-			}
+		if(key == '2'){
+			Pilihan = 2;
 		}
-		if(Pilihan==3){
+		if(key == '3'){
+			Pilihan = 3;
+		}
+		if(key == 13){ 
 			Keluar = 1;
 		}
+		printMenu(Pilihan);
+		
+		key = 0;
+		for(i=0; i <=5000; i++){
+			for(j=0; j<=10000; j++){
+			}
+		}
 	}
-
+	if(Pilihan == 1){
+		Keluar=0;
+		while(!Keluar) {
+			printFpb();
+			printf("\nPress Esc To Exit");
+			key = getch();
+			if(key == 27){
+				Keluar = 1;
+				key = 0;
+			}
+		}
+	}
+	if(Pilihan == 2){
+		Keluar=0;
+		while(Keluar != 1) {
+			printKpk();
+			printf("\nPress Esc To Exit");
+			key = getch();
+			if(key == 27){
+				Keluar =1;
+				key=0;
+			}
+		}
+	}
+	if(Pilihan==3){
+		Keluar = 1;
+	}
+}
