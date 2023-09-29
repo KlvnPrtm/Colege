@@ -1,0 +1,63 @@
+Nomor Struk: 1
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Bandung
+Kelas: Ekonomi
+Jumlah Penumpang: 2
+Total Harga: Rp 240000
+--------------------
+Nomor Struk: 2
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Bandung
+Kelas: Ekonomi
+Jumlah Penumpang: 2
+Total Harga: Rp 480000
+--------------------
+Nomor Struk: 1
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Yogyakarta
+Kelas: Eksekutif
+Jumlah Penumpang: 3
+Total Harga: Rp 1500000
+--------------------
+Nomor Struk: 2
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Yogyakarta
+Kelas: Eksekutif
+Jumlah Penumpang: 3
+Total Harga: Rp 3000000
+--------------------
+Nomor Struk: 1
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Bandung
+Kelas: Ekonomi
+Jumlah Penumpang: 1
+Total Harga: Rp 120000
+--------------------
+Nomor Struk: 1
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Bandung
+Kelas: Ekonomi
+Jumlah Penumpang: 1
+Total Harga: Rp 120000
+--------------------
+Nomor Struk: 1
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Bandung
+Kelas: Ekonomi
+Jumlah Penumpang: 1
+Total Harga: Rp 120000
+--------------------
+Nomor Struk: 2
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Bandung
+Kelas: Ekonomi
+Jumlah Penumpang: 1
+Total Harga: Rp 240000
+--------------------
+Nomor Struk: 1
+Tanggal Transaksi: 2023-03-16
+Tujuan: Salatiga - Yogyakarta
+Kelas: Ekonomi
+Jumlah Penumpang: 1
+Total Harga: Rp 300000
+--------------------
