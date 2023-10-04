@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <windows.h>
 
 int main(){
 
@@ -26,5 +27,6 @@ int main(){
         l++;
         printf ("\n");
     }
-
+    system("pause");
+    return 0;
 }
