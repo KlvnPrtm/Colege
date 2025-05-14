@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Sembako</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Fetch products from the backend
+        async function fetchProducts() {
+            const response = await fetch('fetch_products.php');
+            const products = await response.json();
+
+            const tableBody = document.getElementById('product-table-body');
+            tableBody.innerHTML = ''; // Clear table before appending new rows
+
+            products.forEach(product => {
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td>${product.id}</td>
+                    <td>${product.namaproduk}</td>
+                    <td>${product.deskripsi}</td>
+                    <td>Rp ${parseFloat(product.harga).toLocaleString('id-ID', {minimumFractionDigits: 2})}</td>
+                    <td>${product.stock}</td>
+                    <td>
+                        <a href='editproduk.php?id=${product.id}' class='btn'>Edit</a>
+                        <a href='hapusproduk.php?id=${product.id}' class='btn delete-btn' onclick='return confirm("Yakin ingin menghapus produk ini?")'>Hapus</a>
+                    </td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Call fetchProducts on page load
+        window.onload = fetchProducts;
+    </script>
+</head>
+<body>
+    <h1>Daftar Produk Sembako</h1>
+    <a href="tambahproduk.php" class="btn">Tambah Produk</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama Produk</th>
+                <th>Deskripsi</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="product-table-body">
+            <!-- Data produk akan dimuat di sini -->
+        </tbody>
+    </table>
+</body>
+</html>

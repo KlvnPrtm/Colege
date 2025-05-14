@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid black;
+      }
+
+      .left {
+        width: 50%;
+      }
+
+      .right {
+        width: 40%;
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+
+      .input-group label {
+        width: 40%;
+        font-weight: bold;
+      }
+
+      .input-group input {
+        width: 60%;
+        padding: 5px;
+        border: 1px solid gray;
+      }
+
+      .output-group {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+
+      .output-group label {
+        width: 40%;
+        font-weight: bold;
+      }
+
+      .output-group span {
+        width: 60%;
+        padding: 5px;
+        border: 1px solid gray;
+        background-color: lightblue;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1>Simulasi Cicilan KPR</h1>
+        <div class="input-group">
+          <label for="harga">Harga Properti (Rp)</label>
+          <!-- <input type="number" id="harga" value="2500000000" /> -->
+          <span id="harga" value="2500000000">2.500.000.000 </span>
+        </div>
+        <div class="input-group">
+          <label for="uang-muka">Uang Muka (Rp)</label>
+          <input type="number" id="uang-muka" value="500000000" />
+        </div>
+        <div class="input-group">
+          <label for="jangka-waktu">Jangka Waktu</label>
+          <input type="number" id="jangka-waktu" value="10" />
+        </div>
+        <div class="input-group">
+          <label for="suku-bunga">Suku Bunga</label>
+          <input type="number" id="suku-bunga" value="5" />
+        </div>
+        <div class="output-group">
+          <label for="jumlah-angsuran">Jumlah Angsuran</label>
+          <span id="jumlah-angsuran">Rp 6.249.999 per bulan</span>
+        </div>
+      </div>
+      <div class="right">
+        <h2>Apakah Anda Tertarik?</h2>
+        <div class="input-group">
+          <label for="nama">Masukkan Nama</label>
+          <input type="text" id="nama" />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="input-group">
+          <label for="no-hp">No Handphone</label>
+          <input type="tel" id="no-hp" />
+        </div>
+        <p>Jika Anda tertarik kirim data diri Anda sekarang</p>
+        <button class="button" id="kirim">Kirim</button>
+      </div>
+    </div>
+    <script>
+      // Get the input and output elements
+      //   var harga = document.getElementById("harga");
+      var uangMuka = document.getElementById("uang-muka");
+      var jangkaWaktu = document.getElementById("jangka-waktu");
+      var sukuBunga = document.getElementById("suku-bunga");
+      var jumlahAngsuran = document.getElementById("jumlah-angsuran");
+      var nama = document.getElementById("nama");
+      var email = document.getElementById("email");
+      var noHp = document.getElementById("no-hp");
+      var kirim = document.getElementById("kirim");
+
+      // Define a function to calculate the monthly installment
+      function hitungAngsuran() {
+        // Get the input values as numbers
+        // var hargaValue = Number(harga.value);
+        var uangMukaValue = Number(uangMuka.value);
+        var jangkaWaktuValue = Number(jangkaWaktu.value);
+        var sukuBungaValue = Number(sukuBunga.value);
+
+        // Calculate the principal installment
+        var Bersih = 2500000000 - uangMukaValue;
+
+        var cicilanPokok = Bersih / (jangkaWaktuValue * 12);
+
+        // Calculate the interest installment per month
+        var cicilanBunga =
+          (Bersih * (sukuBungaValue / 100) * jangkaWaktuValue) / 120;
+
+        // Calculate the total installment
+        var jumlahAngsuranValue = cicilanPokok + cicilanBunga;
+
+        // Format the output as currency
+        var formatter = new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+        });
+
+        // Display the output
+        jumlahAngsuran.textContent =
+          formatter.format(jumlahAngsuranValue) + " per bulan";
+      }
+
+      // Define a function to validate and submit the user data
+      function kirimData() {
+        // Get the input values as strings
+        var namaValue = nama.value;
+        var emailValue = email.value;
+        var noHpValue = noHp.value;
+
+        // Check if the input fields are not empty
+        if (namaValue && emailValue && noHpValue) {
+          // Create an object to store the user data
+          var userData = {
+            nama: namaValue,
+            email: emailValue,
+            noHp: noHpValue,
+          };
+
+          // Convert the object to JSON string
+          var userDataJSON = JSON.stringify(userData);
+
+          // Send the JSON string to a server or API
+          // For example, using fetch
+          // fetch("https://example.com/api/kirim-data", {
+          //   method: "POST",
+          //   body: userDataJSON
+          // })
+          // .then(response => response.json())
+          // .then(data => {
+          //   // Handle the response data
+          //   console.log(data);
+          // })
+          // .catch(error => {
+          //   // Handle the error
+          //   console.error(error);
+          // });
+
+          // For demonstration purposes, just alert the JSON string
+          alert("Data yang Anda kirimkan adalah:\n" + userDataJSON);
+        } else {
+          // Alert the user to fill in the required fields
+          alert("Harap isi semua data diri Anda");
+        }
+      }
+
+      // Call the hitungAngsuran function when the page loads
+      hitungAngsuran();
+
+      // Add event listeners to the input elements to update the output
+      harga.addEventListener("input", hitungAngsuran);
+      uangMuka.addEventListener("input", hitungAngsuran);
+      jangkaWaktu.addEventListener("input", hitungAngsuran);
+      sukuBunga.addEventListener("input", hitungAngsuran);
+
+      // Add event listener to the kirim button to submit the user data
+      kirim.addEventListener("click", kirimData);
+    </script>
+  </body>
+</html>

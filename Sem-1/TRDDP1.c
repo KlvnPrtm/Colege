@@ -53,8 +53,8 @@ void printMenu(int pilihan){
 	}else {
 		printf("    5.Exit");	
 	}
-	gotoxy(30,10);
-	printf("------------------");
+	// gotoxy(30,10);
+	// printf("\n------------------");
 }
 
 void programRumah(){

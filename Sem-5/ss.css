@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.left {
+  flex: 1;
+  padding: 20px;
+  background-color: lightblue;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+  background-color: lightgreen;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+form {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  font-style: italic;
+  text-align: center;
+}

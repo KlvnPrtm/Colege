@@ -1,0 +1,20 @@
+.container-nav {
+  justify-items: center;
+  display: flex;
+  height: 200px;
+  width: 200%;
+  background-color: rgb(255, 247, 0);
+}
+
+.container-ul {
+  background-color: black;
+  list-style-type: square;
+  padding: 5%;
+}
+
+.container-li {
+  border: 1px solid black;
+  background-color: rgb(139, 129, 184);
+  justify-items: center;
+  color: #d4cece;
+}

@@ -3,7 +3,6 @@
 
 
 void Bintang(int n){
-    
     int i,j; // loop var 
     int px = n/2+1; // print controls (mid) 
     for(i = 1; i <= n; i++){
@@ -25,7 +24,7 @@ void Bintang(int n){
 }
 
 int main(){
-    int n=9; // size 
+    int n; // size 
     int p;
 
     for (int a=0;a<=p;a++){

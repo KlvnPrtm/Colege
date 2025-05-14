@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main(){
     int bil1=3,bil2=2,input,i;
-    printf("Masukan Angka : ",);
-    scanf("%d ",&input);
+    printf("Masukan Angka : ");
+    scanf(" %d",&input);
     for(i=1;i<=input;i++){
         if(i%2==1){
             printf("%d ",bil1);

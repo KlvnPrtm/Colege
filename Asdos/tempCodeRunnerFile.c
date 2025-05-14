@@ -1,13 +1,6 @@
-a Untuk Integer: ");
-    // scanf("%d",&i);
-    // printf("Masukan Angka Untuk Char: ");
-    // scanf(" %c",&c);
-    // printf("Masukan Angka Untuk Float: ");
-    // scanf("%f",&f);
-    // printf("Masukan Angka Untuk Double: ");
-    // scanf("%f",&d);
-
-
-    // printf("%d\n",i);
-    // printf("%c\n",c);
-    // printf("%f\n",f);
+or (int i = 1; i<= 3; i++){
+        for (int j = i; j <= 3; j++){
+        printf("* ");
+        }
+        printf("\n");
+    }

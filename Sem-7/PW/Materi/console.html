@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- alternatif 1 -->
+    <h1>
+      <script>
+        console.log("s");
+      </script>
+    </h1>
+  </head>
+  <body>
+    <center>
+      <h1></h1>
+    </center>
+
+    <!-- alternatif 2 -->
+    <script>
+      console.log("Tes");
+      document.write("Hellow");
+    </script>
+
+    <a href="#" onclick="alert('Hellow')">tekan tombol</a>
+
+    <!-- memberikan even -->
+    <button onclick="tampilkan_nama()">klik ini</button>
+
+    <!-- id_hasil -->
+    <div id="hasil"></div>
+
+    <!-- membuat fungsi tampilan nama -->
+
+    <script>
+      function tampilkan_nama() {
+        document.getElementById("hasil").innerHTML = "<h2> nama saya kelvin";
+      }
+    </script>
+
+    <input type="text" onkeypress="return onlyvalue(event)" />
+
+    <script>
+      function onlyvalue(evt) {
+        var charcode = event.which ? event.which : event.keyCode;
+        if (charcode > 31 && (charcode < 48 || charcode > 57)) return false;
+        return true;
+      }
+    </script>
+
+    <div class="login">
+      <form action="#" method="post" onsubmit="validasi()">
+        <!-- atribut nama -->
+        <div>
+          <label>nama lengkap: </label>
+          <input type="text" name="nama" id="nama" />
+        </div>
+        <!-- atribut email -->
+        <div>
+          <label>email: </label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <!-- atribut alamat -->
+        <div>
+          <label>Alamat Lengkap: </label>
+          <textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+        </div>
+
+        <div>
+          <input type="submit" name="daftar" class="tombol" />
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script type="text/Javascript">
+    function validasi() {
+        var nama = document.getElementById("nama").value;
+        var alamat = document.getElementById("alamat").value;
+        var email = document.getElementById("email").value;
+        if (nama != "" && alamat != "" && email != "") {
+            return true;
+        }else{
+            alert('data di isi dengan lengkap ya bro...');
+        }
+    }
+  </script>
+</html>

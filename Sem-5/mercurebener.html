@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f0f0f0;
+        height: 60px;
+        padding: 0 20px;
+      }
+
+      .navbar-logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .navbar-menu {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar-menu li {
+        margin: 0 10px;
+      }
+
+      .navbar-menu a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .navbar-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .main {
+        display: flex;
+        margin: 20px;
+      }
+
+      .main-image {
+        width: 70%;
+        height: 400px;
+        background-image: url("https://i.imgur.com/9s1Y8Zl.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .main-image-title {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .main-image-heart {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background-image: url("https://i.imgur.com/2y3Y6ZL.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .main-thumbnails {
+        width: 30%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+
+      .main-thumbnail {
+        height: 195px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .main-thumbnail-1 {
+        background-image: url("https://i.imgur.com/9s1Y8Zl.jpg");
+      }
+
+      .main-thumbnail-2 {
+        background-image: url("https://i.imgur.com/5Q8c8XO.jpg");
+      }
+
+      .main-thumbnail-3 {
+        background-image: url("https://i.imgur.com/0w3zq4A.jpg");
+      }
+
+      .main-thumbnail-4 {
+        background-image: url("https://i.imgur.com/7QJjF0C.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-logo">CHILLO PROPERTY</div>
+        <ul class="navbar-menu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">DIJUAL</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">ARTIKEL</a></li>
+        </ul>
+        <button class="navbar-button">TAMBAH IKLAN</button>
+      </div>
+      <div class="main">
+        <div class="main-image">
+          <div class="main-image-title">Grand Mercure Unit 2</div>
+          <div class="main-image-heart"></div>
+        </div>
+        <div class="main-thumbnails">
+          <div class="main-thumbnail main-thumbnail-1"></div>
+          <div class="main-thumbnail main-thumbnail-2"></div>
+          <div class="main-thumbnail main-thumbnail-3"></div>
+          <div class="main-thumbnail main-thumbnail-4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
