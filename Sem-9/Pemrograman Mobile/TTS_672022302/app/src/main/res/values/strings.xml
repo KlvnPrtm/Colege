@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TTS_672022302</string>
+    <string name="question_placeholder">Pertanyaan Akan Muncul Disini</string>
+    <string name="check_answer_button_text">Check Answer</string>
+    <string name="section_title">Pilih Soal:</string>
+    <string name="section_1_button">Soal 1</string>
+    <string name="section_2_button">Soal 2</string>
+    <string name="section_3_button">Soal 3</string>
+    <string name="answer_correct">Jawaban Benar!</string>
+    <string name="answer_wrong">Jawaban Salah!</string>
+    <string name="select_answer_first">Pilih jawaban terlebih dahulu!</string>
+</resources>

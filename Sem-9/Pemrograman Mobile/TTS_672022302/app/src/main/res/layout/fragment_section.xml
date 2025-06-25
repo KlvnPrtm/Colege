@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/section_title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSection1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/section_1_button"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSection2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/section_2_button"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSection3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/section_3_button"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
