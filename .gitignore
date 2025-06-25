@@ -27,3 +27,4 @@ random/bb.o
 tlx/tempCodeRunnerFile.c
 *tempCodeRunnerFile.
 *.exe
+*.ipynb
