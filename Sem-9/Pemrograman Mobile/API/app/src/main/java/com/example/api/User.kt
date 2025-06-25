@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName
 
 data class User (
     val id: Int,
-    @SerializedName("firstName") // Anotasi ini memastikan nama cocok dengan JSON
-    val firstName: String, // <-- PERBAIKI INI (dari firtsName)
+    @SerializedName("firstName")
+    val firstName: String,
     val lastName: String,
     val university: String,
-    val image: String // <-- TAMBAHKAN INI untuk menampung URL gambar
+    val image: String
 )

@@ -10,7 +10,6 @@ import java.util.Locale
 
 class MyViewModel : ViewModel() {
 
-    // --- Bagian User (Tidak ada perubahan signifikan) ---
     private val _users = MutableLiveData<List<User>>()
     val users: LiveData<List<User>> = _users
 
@@ -28,34 +27,25 @@ class MyViewModel : ViewModel() {
         }
     }
 
-    // --- BAGIAN PRODUK DIUBAH TOTAL ---
-    // LiveData untuk menyimpan harga produk yang sudah diformat
     private val _productPrice = MutableLiveData<String>()
     val productPrice: LiveData<String> = _productPrice
 
-    // Fungsi baru untuk mengambil satu produk berdasarkan ID
     fun fetchProductById(productId: Int) {
-        // Tampilkan pesan loading
         _productPrice.value = "Mencari harga produk..."
         viewModelScope.launch {
             try {
                 val product = RetrofitInstance.api.getProductById(productId)
-                // Jika berhasil, format harganya dan tampilkan
                 _productPrice.value = formatPrice(product.price)
             } catch (e: Exception) {
-                // Jika produk tidak ditemukan (misal User ID 101, tapi produk hanya 100)
-                // atau ada error lain.
                 _productPrice.value = "Harga untuk produk ini tidak ditemukan."
                 e.printStackTrace()
             }
         }
     }
 
-    // Fungsi format harga (bisa kita gunakan kembali)
     private fun formatPrice(price: Double): String {
         val localeID = Locale("in", "ID")
         val numberFormat = NumberFormat.getCurrencyInstance(localeID)
-        // Kita ubah labelnya agar lebih sesuai
         return "Harga Produk: ${numberFormat.format(price)}"
     }
 }

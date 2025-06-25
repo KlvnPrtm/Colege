@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
                 currentIndex = 0
                 displayUser()
 
-                // Aktifkan tombol navigasi dan produk setelah user didapat
                 binding.btnNext.isEnabled = true
                 binding.btnPrev.isEnabled = true
                 binding.btnGetProducts.isEnabled = true
@@ -74,14 +73,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupProductObservers() {
-        // Observer untuk menampilkan harga produk yang didapat dari ViewModel
         viewModel.productPrice.observe(this) { priceText ->
             binding.txtAveragePrice.text = priceText
         }
 
-        // Ubah fungsi tombol ini
         binding.btnGetProducts.setOnClickListener {
-            // Pastikan ada user yang ditampilkan sebelum mencari harga
             if (allUsers.isNotEmpty()) {
                 val currentUserId = allUsers[currentIndex].id
                 viewModel.fetchProductById(currentUserId)
@@ -102,8 +98,6 @@ class MainActivity : AppCompatActivity() {
                 .error(R.mipmap.ic_launcher_round)
                 .into(binding.imgUser)
 
-            // KOSONGKAN HARGA LAMA SETIAP GANTI USER
-            // agar pengguna tahu harga perlu dicari ulang
             binding.txtAveragePrice.text = "Klik tombol di bawah untuk cek harga"
         }
     }
