@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/etKodeLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kode (4 / 5 / 10 digit)"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etPasswordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="numberPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/tvStatusLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="12dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnKeRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Belum punya akun? Daftar di sini"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

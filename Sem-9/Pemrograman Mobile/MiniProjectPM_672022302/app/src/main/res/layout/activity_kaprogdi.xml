@@ -1,0 +1,53 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Form Input Mata Kuliah -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Mata Kuliah"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etKodeMatkul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Matkul (contoh: MAT001)" />
+
+        <EditText
+            android:id="@+id/etNamaMatkul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Matkul" />
+
+        <EditText
+            android:id="@+id/etSKS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SKS"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnSimpanMatkul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan Mata Kuliah" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatusKaprogdi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+</ScrollView>

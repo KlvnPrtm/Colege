@@ -1,0 +1,81 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:id="@+id/layoutMahasiswa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etNimMahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan NIM (10 digit)"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnValidasiNIM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Validasi NIM" />
+
+        <TextView
+            android:id="@+id/tvStatusNIM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPilihMatkul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Mata Kuliah:"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layoutMatkulCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnAmbilMatkul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambil Mata Kuliah"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvNilaiMahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/btnLihatTranskrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat Transkrip"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvTranskrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text=""
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

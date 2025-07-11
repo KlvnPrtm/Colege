@@ -1,0 +1,52 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Form Input Nilai -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Nilai Mahasiswa"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNimDosen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIM Mahasiswa (10 digit)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etKodeMatkulDosen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Mata Kuliah" />
+
+        <EditText
+            android:id="@+id/etNilaiDosen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nilai"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnSimpanNilai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan Nilai" />
+
+        <TextView
+            android:id="@+id/tvStatusDosen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+</ScrollView>
